@@ -147,8 +147,7 @@ const body = document.body
         
             window.sr = ScrollReveal({ reset: true });
             sr.reveal('.banner h1', { duration: 4000 });
-        }
-        Footer();
+       
 
 var form = document.createElement('form');
 form.id = 'contactForm';
@@ -256,4 +255,6 @@ form.addEventListener('submit', function(event) {
     alert('Obrigado por entrar em contato, ' + name + '! Nós responderemos em breve.');
     form.reset();
   }, 1000);
-});
+})
+ }
+Footer()
