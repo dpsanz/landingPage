@@ -15,7 +15,7 @@ const body = document.body
         div.style.justifyContent = 'center';
     
         window.sr = ScrollReveal({ reset: true });
-        sr.reveal('.banner h1', { duration: 4000 });
+        sr.reveal('.banner ', { duration: 4000 });
     }
     banner();
 
@@ -72,7 +72,7 @@ const body = document.body
             div.setAttribute('class', 'habilidadesHenrique');
             
             var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol e jogos online';
+            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol, jogos online, musculação';
         
             div.appendChild(textoBanner);
             body.append(div);
@@ -93,7 +93,7 @@ const body = document.body
             div.setAttribute('class', 'habilidadesEric');
     
             var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol e jogos online';
+            textoBanner.innerText = 'Eric, 17 anos, estuda na FIAP desde 2020. Suas principais habilidades na área escolar é : Front-end e Back-end. Fora da escola so atleta de boxe e pratico musculação';
         
             div.appendChild(textoBanner);
             body.append(div);
@@ -101,7 +101,7 @@ const body = document.body
             div.style.display = 'flex';
             div.style.alignItems = 'center';
             div.style.justifyContent = 'flex-end';
-            div.style.marginRight='20px'
+            div.style.padding='20px'
         
             window.sr = ScrollReveal({ reset: true });
             sr.reveal('.banner h1', { duration: 4000 });
@@ -115,7 +115,7 @@ const body = document.body
             div.setAttribute('class', 'habilidadesDaniel');
     
             var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol e jogos online';
+            textoBanner.innerText = 'Daniel, 18 anos, estuda na FIAP desde 2023. Suas principais habilidades na área escolar é : Front-end/Desing. Fora da escola é o futebol, jogos online, xadrez e musculação';
         
             div.appendChild(textoBanner);
             body.append(div);
@@ -147,19 +147,15 @@ const body = document.body
         
             window.sr = ScrollReveal({ reset: true });
             sr.reveal('.banner h1', { duration: 4000 });
-        }
-        Footer();
+       
 
-      // Criando o formulário
 var form = document.createElement('form');
 form.id = 'contactForm';
 
-// Definindo estilos CSS para o formulário
 form.style.maxWidth = '400px';
 form.style.margin = '20px auto';
 form.style.fontFamily = 'Arial, sans-serif';
 
-// Função para criar campos de formulário
 function createField(labelText, inputType, inputName, isRequired) {
   var div = document.createElement('div');
   div.style.marginBottom = '10px';
@@ -168,16 +164,22 @@ function createField(labelText, inputType, inputName, isRequired) {
   label.textContent = labelText;
   label.style.display = 'block';
   label.style.fontWeight = 'bold';
+  label.style.color = 'white';
+  
+
+
 
   var input = document.createElement('input');
   input.type = inputType;
-  input.name = inputName;
+  input.ne = inputName;
   input.required = isRequired;
   input.style.width = '100%';
   input.style.padding = '8px';
   input.style.boxSizing = 'border-box';
   input.style.border = '1px solid #ccc';
   input.style.borderRadius = '4px';
+  input.placeholder = 'Digite aqui...';
+  
 
   
 
@@ -187,7 +189,6 @@ function createField(labelText, inputType, inputName, isRequired) {
   return div;
 }
 
-// Criando os campos do formulário
 var nameField = createField('Nome:', 'text', 'name', true);
 var emailField = createField('Email:', 'email', 'email', true);
 
@@ -199,6 +200,8 @@ messageLabel.textContent = 'Mensagem:';
 messageLabel.style.display = 'block';
 messageLabel.style.fontWeight = 'bold';
 
+
+
 var messageTextarea = document.createElement('textarea');
 messageTextarea.name = 'message';
 messageTextarea.rows = '4';
@@ -208,16 +211,16 @@ messageTextarea.style.padding = '8px';
 messageTextarea.style.boxSizing = 'border-box';
 messageTextarea.style.border = '1px solid #ccc';
 messageTextarea.style.borderRadius = '4px';
+messageTextarea.placeholder = 'Digite sua mensagem aqui...';
+
 
 messageDiv.appendChild(messageLabel);
 messageDiv.appendChild(messageTextarea);
 
-// Adicionando os campos ao formulário
 form.appendChild(nameField);
 form.appendChild(emailField);
 form.appendChild(messageDiv);
 
-// Criando o botão de envio
 var submitButton = document.createElement('button');
 submitButton.type = 'submit';
 submitButton.textContent = 'Enviar';
@@ -229,7 +232,6 @@ submitButton.style.color = 'white';
 submitButton.style.borderRadius = '4px';
 submitButton.style.cursor = 'pointer';
 
-// Estilizando o botão de envio ao passar o mouse
 submitButton.addEventListener('mouseover', function() {
   submitButton.style.backgroundColor = '#0056b3';
 });
@@ -238,13 +240,10 @@ submitButton.addEventListener('mouseout', function() {
   submitButton.style.backgroundColor = '#007bff';
 });
 
-// Adicionando o botão de envio ao formulário
 form.appendChild(submitButton);
 
-// Adicionando o formulário ao corpo do documento
 document.body.appendChild(form);
 
-// Adicionando evento de envio do formulário
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -252,9 +251,10 @@ form.addEventListener('submit', function(event) {
   var email = form.elements['email'].value;
   var message = form.elements['message'].value;
 
-  // Simulação de envio do formulário (substitua por sua lógica de envio)
   setTimeout(function() {
     alert('Obrigado por entrar em contato, ' + name + '! Nós responderemos em breve.');
     form.reset();
   }, 1000);
-});
+})
+ }
+Footer()
