@@ -47,7 +47,7 @@ body {
 }
 .areaCards:hover{
   text-align: center;
-  color: rgb(209, 0, 0);
+  color: rgb(255, 0, 0);
   align-items: center;
   justify-content:center ;
   font-size: 3rem;
@@ -88,7 +88,7 @@ body {
   background-size: cover;
   width: 52vh; 
   height: 52vh;
-  border: 2px solid aqua;
+  border: 2px solid rgb(255, 0, 0);
 }
 
 .card-2{
@@ -114,7 +114,7 @@ body {
   background-size: cover;
   width: 52vh; 
   height: 52vh;
-  border: 2px solid aqua;
+  border: 2px solid rgb(255, 0, 0);
 }
 
 .card-3{
@@ -140,7 +140,7 @@ body {
   background-size: cover;
   width: 52vh; 
   height: 52vh;
-  border: 2px solid aqua;
+  border: 2px solid rgb(255, 0, 0);
 }
 .sec1 {
   background-position: 100%;
@@ -161,7 +161,7 @@ body {
 .habilidades{
   margin-top: 50px;
   margin-bottom: 20px;
-  color: aqua;
+  color: rgb(255, 0, 0);
   font-size: 1rem;
 }
 
@@ -184,7 +184,7 @@ body {
 }
 
 .contato{
-  color: aqua;
+  color: rgb(255, 0, 0);
 }
 .contatoHenrique{
   color: white;
@@ -199,6 +199,16 @@ body {
 }
 
 .input{
-  background-color: #00FFFF;
+  background-color: #ff0000;
   border: none;
+}
+
+.footer-text{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.copyright{
+  text-align: center;
+  padding-bottom: 4rem;
 }
